@@ -1,0 +1,15 @@
+type: object
+required:
+  - id
+  - name
+properties:
+  institution:
+    $ref: './Institution.yaml'
+  application:
+    $ref: './Application.yaml'
+  name:
+    type: string
+    example: "teacher"
+  id:
+    type: string
+    example: "universiteitvanharderwijk.nl:https://service.universiteitvanharderwijk.nl/ssp/metadata.xml:teacher"

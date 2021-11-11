@@ -1,0 +1,27 @@
+type: object
+properties:
+  email:
+    type: string
+    format: email
+    example: "sjon.vandersjonnies@universiteitvanharderwijk.nl"
+  displayname:
+    type: string
+    example: "Sjon van der sjonnies"
+  edupersonprincipalname:
+    type: string
+    format: email
+    example: "ssjonnies@universiteitvanharderwijk.nl"
+  institution:
+    type: array
+    items:
+      properties:
+        schachome:
+          type: string
+          format: uri
+          example: "universiteitvanharderwijk.nl"
+  rights:
+    type: array
+    items:
+      type: string
+      enum: [Superadmin, Roleadmin, Inviter]
+      example: "Roleadmin"

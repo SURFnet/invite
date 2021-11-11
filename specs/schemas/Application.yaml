@@ -1,0 +1,13 @@
+type: object
+properties:
+  displayname:
+    type: string
+    example: "This beatifull service"
+  entityId:
+    type: string
+    format: uri
+    example: "https://service.universiteitvanharderwijk.nl/ssp/metadata.xml"
+  landingpage:
+    type: string
+    format: uri
+    example: "https://service.universiteitvanharderwijk.nl/login"

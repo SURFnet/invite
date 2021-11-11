@@ -1,0 +1,17 @@
+type: object
+required:
+  - role
+  - guest
+properties:
+  role:
+    $ref: "./Role.yaml"
+  guest:
+    $ref: "./Guest.yaml"
+  enddate:
+    type: string
+    format: date
+    example: "2022-02-23 12:00"
+  state:
+    type: string
+    enum: [new, sent, accepted, expired]
+    example: "accepted"

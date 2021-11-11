@@ -1,0 +1,15 @@
+type: object
+required:
+  - email
+properties:
+  email:
+    type: string
+    format: email
+    example: "peter@gmail.com"
+  displayname:
+    type: string
+    example: "Peter"
+  edupersonprincipalname:
+    type: string
+    format: email
+    example: "982169f3-6d2c-4bbf-a783-5859969f98af@eduid.nl"

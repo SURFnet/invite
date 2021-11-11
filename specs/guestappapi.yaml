@@ -25,7 +25,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Role'
+                $ref: './schemas/Role.yaml'
         '401':
           $ref: '#/components/responses/Unauthorized'   # <-----
         '404':
@@ -37,14 +37,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Role'
+              $ref: './schemas/Role.yaml'
       responses:
         '201':
           description: The role was created, the new role is returned
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Role"
+                $ref: './schemas/Role.yaml'
         '401':
           $ref: '#/components/responses/Unauthorized'   # <-----
         '404':
@@ -56,7 +56,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Role'
+              $ref: './schemas/Role.yaml'
       responses:
         '200':
           description: OK
@@ -65,7 +65,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Role"
+                $ref: './schemas/Role.yaml'
         '401':
           $ref: '#/components/responses/Unauthorized'   # <-----
         '404':
@@ -98,7 +98,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Roles'
+                $ref: './schemas/Roles.yaml'
         '401':
           $ref: '#/components/responses/Unauthorized'   # <-----
         '404':
@@ -121,7 +121,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Guest'
+                $ref: './schemas/Guest.yaml'
         '401':
           $ref: '#/components/responses/Unauthorized'   # <-----
         '404':
@@ -136,7 +136,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Guests'
+                $ref: './schemas/Guests.yaml'
         '401':
           $ref: '#/components/responses/Unauthorized'   # <-----
         '404':
@@ -150,7 +150,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Invite'
+              $ref: './schemas/Invite.yaml'
       responses:
         '200':    # status code
           description: OK
@@ -176,7 +176,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: './schemas/User.yaml'
         '401':
           $ref: '#/components/responses/Unauthorized'   # <-----
         '404':
@@ -191,7 +191,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Users'
+                $ref: './schemas/Users.yaml'
         '401':
           $ref: '#/components/responses/Unauthorized'   # <-----
         '404':
@@ -199,123 +199,6 @@ paths:
 
 components:
   schemas:
-    Institution:
-      type: object
-      required:
-        - schachome
-        - name
-      properties:
-        schachome:
-          type: string
-          format: uri
-          example: "universiteitvanharderwijk.nl"
-        name:
-          type: string
-          example: "Universiteit van Harderwijk"
-    Application:
-      type: object
-      properties:
-        displayname:
-          type: string
-          example: "This beatifull service"
-        entityId:
-          type: string
-          format: uri
-          example: "https://service.universiteitvanharderwijk.nl/ssp/metadata.xml"
-        landingpage:
-          type: string
-          format: uri
-          example: "https://service.universiteitvanharderwijk.nl/login"
-    Role:
-      type: object
-      required:
-        - id
-        - name
-      properties:
-        institution:
-          $ref: "#/components/schemas/Institution"
-        application:
-          $ref: "#/components/schemas/Application"
-        name:
-          type: string
-          example: "teacher"
-        id:
-          type: string
-          example: "universiteitvanharderwijk.nl:https://service.universiteitvanharderwijk.nl/ssp/metadata.xml:teacher"
-    Roles:
-      type: array
-      items:
-        $ref: "#/components/schemas/Role"
-    Invite:
-      type: object
-      required:
-        - role
-        - guest
-      properties:
-        role:
-          $ref: "#/components/schemas/Role"
-        guest:
-          $ref: "#/components/schemas/Guest"
-        enddate:
-          type: string
-          format: date
-          example: "2022-02-23 12:00"
-        state:
-          type: string
-          enum: [new, sent, accepted, expired]
-          example: "accepted"
-    Guest:
-      type: object
-      required:
-        - email
-      properties:
-        email:
-          type: string
-          format: email
-          example: "peter@gmail.com"
-        displayname:
-          type: string
-          example: "Peter"
-        edupersonprincipalname:
-          type: string
-          format: email
-          example: "982169f3-6d2c-4bbf-a783-5859969f98af@eduid.nl"
-    Guests:
-      type: array
-      items:
-        $ref: "#/components/schemas/Guest"
-    User:
-      type: object
-      properties:
-        email:
-          type: string
-          format: email
-          example: "sjon.vandersjonnies@universiteitvanharderwijk.nl"
-        displayname:
-          type: string
-          example: "Sjon van der sjonnies"
-        edupersonprincipalname:
-          type: string
-          format: email
-          example: "ssjonnies@universiteitvanharderwijk.nl"
-        institution:
-          type: array
-          items:
-            properties:
-              schachome:
-                type: string
-                format: uri
-                example: "universiteitvanharderwijk.nl"
-        rights:
-          type: array
-          items:
-            type: string
-            enum: [Superadmin, Roleadmin, Inviter]
-            example: "Roleadmin"
-    Users:
-      type: array
-      items:
-        $ref: "#/components/schemas/User"
     # Schema for error response body
     Error:
       type: object
@@ -347,4 +230,3 @@ components:
           example:
             code: 404
             message: "Not found"
-

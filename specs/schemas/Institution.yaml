@@ -1,0 +1,12 @@
+type: object
+required:
+  - schachome
+  - name
+properties:
+  schachome:
+    type: string
+    format: uri
+    example: "universiteitvanharderwijk.nl"
+  name:
+    type: string
+    example: "Universiteit van Harderwijk"
