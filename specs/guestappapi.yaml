@@ -1,0 +1,350 @@
+openapi: 3.0.0
+info:
+  title: GuestApplication API
+  description: This describes the REST interface to the guestapplication API
+  version: 0.0.1
+servers:
+  - url: http://eduid-guest.test.surfnet.nl/v1
+    description: Public testing enviroment
+paths:
+  /role:
+    get:
+      summary: Get a role
+      description: Retrieves a single role
+      parameters:
+        - name: id
+          in: query
+          description: User ID
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':    # status code
+          description: a single role
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Role'
+        '401':
+          $ref: '#/components/responses/Unauthorized'   # <-----
+        '404':
+          $ref: '#/components/responses/NotFound'       # <-----
+    post:
+      summary: Create a Role
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Role'
+      responses:
+        '201':
+          description: The role was created, the new role is returned
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Role"
+        '401':
+          $ref: '#/components/responses/Unauthorized'   # <-----
+        '404':
+          $ref: '#/components/responses/NotFound'       # <-----
+    put:
+      summary: Update a Role
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Role'
+      responses:
+        '200':
+          description: OK
+        default:
+          description: The role was updated, the new role is returned
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Role"
+        '401':
+          $ref: '#/components/responses/Unauthorized'   # <-----
+        '404':
+          $ref: '#/components/responses/NotFound'       # <-----
+    delete:
+      summary: Deletes a role
+      description: Deletes the role specified by the id
+      parameters:
+        - name: id
+          in: query
+          description: User ID
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':    # status code
+          description: OK
+        '401':
+          $ref: '#/components/responses/Unauthorized'   # <-----
+        '404':
+          $ref: '#/components/responses/NotFound'       # <-----
+  /roles:
+    get:
+      summary: List roles
+      description: Retrieves a list of roles
+      responses:
+        '200':    # status code
+          description: A JSON array of roles
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Roles'
+        '401':
+          $ref: '#/components/responses/Unauthorized'   # <-----
+        '404':
+          $ref: '#/components/responses/NotFound'       # <-----
+  /guest:
+    get:
+      summary: Get a guest
+      description: Retrieves the information of a single guest
+      parameters:
+        - name: id
+          in: query
+          description: User ID
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':    # status code
+          description: a single role
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Guest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'   # <-----
+        '404':
+          $ref: '#/components/responses/NotFound'       # <-----
+  /guests:
+    get:
+      summary: List guests
+      description: Retrieves a list of guests
+      responses:
+        '200':    # status code
+          description: A JSON array of guests
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Guests'
+        '401':
+          $ref: '#/components/responses/Unauthorized'   # <-----
+        '404':
+          $ref: '#/components/responses/NotFound'       # <-----
+  /invite:
+    post:
+      summary: Send an invite
+      description: Send an invite for a role to a guest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Invite'
+      responses:
+        '200':    # status code
+          description: OK
+        '401':
+          $ref: '#/components/responses/Unauthorized'   # <-----
+        '404':
+          $ref: '#/components/responses/NotFound'       # <-----
+  /user:
+    get:
+      summary: Returns an user
+      description: Retrieves the information of a single inviter or roleadmin
+      parameters:
+        - name: id
+          in: query
+          description: User ID
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':    # status code
+          description: a single role
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '401':
+          $ref: '#/components/responses/Unauthorized'   # <-----
+        '404':
+          $ref: '#/components/responses/NotFound'       # <-----
+  /users:
+    get:
+      summary: List users
+      description: Retrieves a list of inviters and roleadmins
+      responses:
+        '200':    # status code
+          description: A JSON array of users
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Users'
+        '401':
+          $ref: '#/components/responses/Unauthorized'   # <-----
+        '404':
+          $ref: '#/components/responses/NotFound'       # <-----
+
+components:
+  schemas:
+    Institution:
+      type: object
+      required:
+        - schachome
+        - name
+      properties:
+        schachome:
+          type: string
+          format: uri
+          example: "universiteitvanharderwijk.nl"
+        name:
+          type: string
+          example: "Universiteit van Harderwijk"
+    Application:
+      type: object
+      properties:
+        displayname:
+          type: string
+          example: "This beatifull service"
+        entityId:
+          type: string
+          format: uri
+          example: "https://service.universiteitvanharderwijk.nl/ssp/metadata.xml"
+        landingpage:
+          type: string
+          format: uri
+          example: "https://service.universiteitvanharderwijk.nl/login"
+    Role:
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        institution:
+          $ref: "#/components/schemas/Institution"
+        application:
+          $ref: "#/components/schemas/Application"
+        name:
+          type: string
+          example: "teacher"
+        id:
+          type: string
+          example: "universiteitvanharderwijk.nl:https://service.universiteitvanharderwijk.nl/ssp/metadata.xml:teacher"
+    Roles:
+      type: array
+      items:
+        $ref: "#/components/schemas/Role"
+    Invite:
+      type: object
+      required:
+        - role
+        - guest
+      properties:
+        role:
+          $ref: "#/components/schemas/Role"
+        guest:
+          $ref: "#/components/schemas/Guest"
+        enddate:
+          type: string
+          format: date
+          example: "2022-02-23 12:00"
+        state:
+          type: string
+          enum: [new, sent, accepted, expired]
+          example: "accepted"
+    Guest:
+      type: object
+      required:
+        - email
+      properties:
+        email:
+          type: string
+          format: email
+          example: "peter@gmail.com"
+        displayname:
+          type: string
+          example: "Peter"
+        edupersonprincipalname:
+          type: string
+          format: email
+          example: "982169f3-6d2c-4bbf-a783-5859969f98af@eduid.nl"
+    Guests:
+      type: array
+      items:
+        $ref: "#/components/schemas/Guest"
+    User:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          example: "sjon.vandersjonnies@universiteitvanharderwijk.nl"
+        displayname:
+          type: string
+          example: "Sjon van der sjonnies"
+        edupersonprincipalname:
+          type: string
+          format: email
+          example: "ssjonnies@universiteitvanharderwijk.nl"
+        institution:
+          type: array
+          items:
+            properties:
+              schachome:
+                type: string
+                format: uri
+                example: "universiteitvanharderwijk.nl"
+        rights:
+          type: array
+          items:
+            type: string
+            enum: [Superadmin, Roleadmin, Inviter]
+            example: "Roleadmin"
+    Users:
+      type: array
+      items:
+        $ref: "#/components/schemas/User"
+    # Schema for error response body
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          enum: [200,204,401,404]
+        message:
+          type: string
+      required:
+        - code
+        - message
+  responses:
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: 401
+            message: "Unauthorized"
+    NotFound:
+      description: The specified resource was not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: 404
+            message: "Not found"
+
