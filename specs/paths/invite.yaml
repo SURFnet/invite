@@ -1,0 +1,80 @@
+get:
+  summary: Retrieve a invite
+  description: Retrieves a single invite
+  parameters:
+    - name: id
+      in: query
+      description: Invite ID
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '200':    # status code
+      description: a single invite
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Invite.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'
+post:
+  summary: Sends an invite to a guest user
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/Invite.yaml'
+  responses:
+    '201':
+      description: The invite was created and sent, the info on the invite is returned
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Invite.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'
+put:
+  summary: Update an Invite
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/Invite.yaml'
+  responses:
+    '200':
+      description: OK
+    default:
+      description: The Invite was updated, the updated invite is returned
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Invite.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'
+delete:
+  summary: Revoke an Invite
+  description: Deletes the invite specified by the id
+  parameters:
+    - name: id
+      in: query
+      description: Invite ID
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '200':    # status code
+      description: OK
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'

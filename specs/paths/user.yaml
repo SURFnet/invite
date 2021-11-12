@@ -1,0 +1,22 @@
+get:
+  summary: Returns an user
+  description: Retrieves the information of a single inviter or roleadmin
+  parameters:
+    - name: id
+      in: query
+      description: User ID
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '200':    # status code
+      description: a single role
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/User.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'

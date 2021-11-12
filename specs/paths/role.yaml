@@ -1,0 +1,80 @@
+get:
+  summary: Get a role
+  description: Retrieves a single role
+  parameters:
+    - name: id
+      in: query
+      description: Role ID
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '200':    # status code
+      description: a single role
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Role.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'
+post:
+  summary: Create a Role
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/Role.yaml'
+  responses:
+    '201':
+      description: The role was created, the new role is returned
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Role.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'
+put:
+  summary: Update a Role
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/Role.yaml'
+  responses:
+    '200':
+      description: OK
+    default:
+      description: The role was updated, the new role is returned
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Role.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'
+delete:
+  summary: Deletes a role
+  description: Deletes the role specified by the id
+  parameters:
+    - name: id
+      in: query
+      description: User ID
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '200':    # status code
+      description: OK
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'

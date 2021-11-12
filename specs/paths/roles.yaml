@@ -1,0 +1,14 @@
+get:
+  summary: List roles
+  description: Retrieves a list of roles
+  responses:
+    '200':    # status code
+      description: A JSON array of roles
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Roles.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'

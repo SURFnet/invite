@@ -1,0 +1,14 @@
+get:
+  summary: List users
+  description: Retrieves a list of inviters and roleadmins
+  responses:
+    '200':    # status code
+      description: A JSON array of users
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Users.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'

@@ -1,0 +1,22 @@
+get:
+  summary: Get a guest
+  description: Retrieves the information of a single guest
+  parameters:
+    - name: id
+      in: query
+      description: User ID
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    '200':    # status code
+      description: a single role
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Guest.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'

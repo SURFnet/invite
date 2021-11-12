@@ -1,15 +1,27 @@
 type: object
 required:
   - id
+  - urn
   - name
+  - institution
+  - application
 properties:
+  id:
+    type: string
+    format: uuid
+    readOnly: true
+    example: 29ad8796-0923-410a-a5e5-d773e32da53e
+  urn:
+    type: string
+    format: urn
+    description: This is generated based upon the institution schachome, the application entityID and the role name
+    readOnly: true
+    example: "universiteitvanharderwijk.nl:https_//service.universiteitvanharderwijk.nl/ssp/metadata.xml:teacher"
+  name:
+    type: string
+    description: A freeform role name. This should be the same as the role name in the application
+    example: "teacher"
   institution:
     $ref: './Institution.yaml'
   application:
     $ref: './Application.yaml'
-  name:
-    type: string
-    example: "teacher"
-  id:
-    type: string
-    example: "universiteitvanharderwijk.nl:https://service.universiteitvanharderwijk.nl/ssp/metadata.xml:teacher"
