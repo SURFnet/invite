@@ -1,5 +1,5 @@
 get:
-  summary: Retrieve a invite
+  summary: Retrieve an invite
   description: Retrieves a single invite
   parameters:
     - name: id
@@ -40,7 +40,7 @@ post:
     '404':
       $ref: '../components/responses/NotFound.yaml'
 put:
-  summary: Update an Invite
+  summary: Update an invite
   requestBody:
     required: true
     content:
@@ -61,7 +61,7 @@ put:
     '404':
       $ref: '../components/responses/NotFound.yaml'
 delete:
-  summary: Revoke an Invite
+  summary: Revoke an invite
   description: Deletes the invite specified by the id
   parameters:
     - name: id
