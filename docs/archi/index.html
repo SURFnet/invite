@@ -1,0 +1,529 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="model" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Ontwerp uitnodig-tool</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) / UI / LAYOUT -->
+	<script type="text/javascript" src="lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui/js/jquery-ui-1.11.2.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui-layout/js/jquery.layout-1.4.4.js"></script>
+	<link type="text/css" rel="stylesheet" href="lib/jquery-ui-layout/css/layout-default-1.4.4.css">
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="css/model.css">
+	<link type="text/css" rel="stylesheet" href="css/i18n.css">
+	<script type="text/javascript" src="js/model.js"></script>
+	<script type="text/javascript" src="js/url-polyfill.min.js"></script>
+</head>
+
+<body>
+	<!-- "ui-layout-north" class set (topbar) -->
+	<div class="ui-layout-north">
+		<nav class="navbar navbar-inverse">
+			<div class="navbar-header">
+				<span class="navbar-brand">Ontwerp uitnodig-tool</span>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#myModal" data-toggle="modal" class="go"><span class="i18n-about"></span></a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+	<iframe name="view" class="ui-layout-center" src="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/model.html" scrolling="no"></iframe>
+
+	<div class="ui-layout-west">
+		<iframe name="element" class="ui-layout-south" src="elements/empty-element.html"  scrolling="no"></iframe>
+		<div class="ui-layout-center">
+			<div class="panel panel-default root-panel">
+				<div class="panel-heading root-panel-heading">
+					<b><span class="i18n-modeltree"></span></b>
+				</div>
+				<div class="panel-body root-panel-body">
+					<b><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/model.html" target="view">Ontwerp uitnodig-tool</a></b>
+					<ul class="tree">
+					<!-- START OF STRINGTEMPLATE CODE -->
+						<li class="tree-folder"><span class="i18n-model_content"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+							<ul>
+                                <li class="tree-folder "><span class="i18n-strategy"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+                                    <ul>
+                                    </ul>
+                                </li>
+								<li class="tree-folder "><span class="i18n-business_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+									<ul>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/7c9daf07-52ca-4b19-8ad4-56a1703450b7.html" target="element"> Uitnodiger </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/436adcc5-ae3a-49e4-839c-4a4defc9b222.html" target="element"> Gast </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/de05ef43-7958-4f33-9109-edbacd1eb4cf.html" target="element"> Rolbeheerder </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/1f0accc4-d329-4a76-9cd4-6a0dca7e154e.html" target="element"> Beheren rollen </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-dfb12eddc4f84071b8cf314019f8d5c1.html" target="element"> Beheren gasten </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-8bd3ec7b6dc04f1daebe09eea7d23424.html" target="element"> Accepteren uitnodiging </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-13f676ceacac4ee98f630b34348b56fb.html" target="element"> Inloggen </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/cdbf4c23-052c-43ce-8426-4ffecddf365a.html" target="element"> Verwijderen rol van gast </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/959c11ed-5af4-488e-b8c5-9c49bdfdd37e.html" target="element"> Verstuur enkele uitnodiging </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/d97edcc8-908a-4109-9261-ebb6ab35e8b8.html" target="element"> Updaten Rolbeheerder </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/fc0a7eb6-604d-4ed0-b5f2-2861206f90a4.html" target="element"> Opvragen gastenlijst </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/d7c96e85-5772-4603-a9c2-772dd96bad7f.html" target="element"> Opvragen Rolbeheerders </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/2076c478-2a8d-4e51-9de3-389507780cf0.html" target="element"> Aanmaken Rolbeheerder </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/00fda1d4-fcc5-40f7-980c-ba2baad4b1e4.html" target="element"> Verwijderen Rol </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/1375bd9e-f2b5-43ec-be20-3f7db8a6e4f8.html" target="element"> Verwijderen Uitnodiger </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/586c4385-bb30-47cd-be89-df9effa484a7.html" target="element"> Update einddatum rol van gast </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/c2e42dc1-304e-42cb-9b9e-7691d537dce1.html" target="element"> Verwijderen Rolbeheerder </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/12208545-6e22-4e39-83a8-a32372a480a2.html" target="element"> Opvragen Rollen </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/10172497-e3d8-4d16-8ec8-38b757aa0c6c.html" target="element"> Updaten gast-gegevens </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/eff7ad5e-5937-4f1c-b7bd-2e5168770dbb.html" target="element"> Updaten Uitnodiger </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/deb3e5a8-6644-49b5-be09-dc4afdbf0765.html" target="element"> Updaten Rol </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/395fd702-e809-4b04-9527-feb167f9c1aa.html" target="element"> Opvragen beschikbare rollen </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/4e0de3eb-4482-4a82-aeb7-64eb820e2c9f.html" target="element"> Verstuur bulk uitnodiging </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/8a4d4894-2e5b-41d7-9e52-a366cb2bbed3.html" target="element"> Opvragen rolbeheerder </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/b93e3cf7-4df6-4146-9653-7b3fda77bd4c.html" target="element"> Opvragen Uitnodigers </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/876023d8-3c95-4946-9c70-5aa2fbf2f016.html" target="element"> Opvragen gast-gegevens </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/7844b80c-5047-4032-8f9f-972c92f2bd9c.html" target="element"> Toevoegen rol aan gast </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/0543b957-91ba-4fea-a546-81c59820678a.html" target="element"> Aanmaken Rol </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-7345feda2ab74d3ea3ce3204fed20baa.html" target="element"> Aanmaken uitnodiger </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-44152c54ef8340b396d6eda8dec54cd1.html" target="element"> Opvragen uitnodiger </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-802a6277467e4f5da23b00e00f056227.html" target="element"> Opvragen Rol </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-f720a4c45e614146ae933fc25adad403.html" target="element"> Super admin </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-bb9e492b853a47edb8891e4b29bd09ef.html" target="element"> Beheren uitnodigers </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-217cb08bc8ad4dabbf5148df11ebc2d8.html" target="element"> Beheren rolbeheerders </a></li>
+
+									</ul>
+								</li>
+								<li class="tree-folder "><span class="i18n-application_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+									<ul>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/9b31bc93-e0cf-4399-acf0-8164fc2a9f45.html" target="element"> Gasten applicatie backend </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/783455af-956c-4aa6-ac3d-43eeaa0e072c.html" target="element"> REST service </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-9e5d5434ed4d4f669a1bb04ec89f25c5.html" target="element"> Uitnodig portaal (SURF) </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-401f6c19dae24f00832d7058905f7b25.html" target="element"> webapplicatie </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-b93acdd3f248476aabf987f5d1bfc4c8.html" target="element"> Gasten applicatie </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-2fb5d04471a348d1a3dec7c0769d9690.html" target="element"> SURFconext </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-74eac4a0c288459fa733f91208e83c3b.html" target="element"> Attribute Aggregation </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-09d96cccfefe4174b9a8e656f0d31bc6.html" target="element"> PDP </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-73d8974079a9438ab0a264e4e7ab509d.html" target="element"> Uitnodig-portaal (instelling) </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-dcb292bd45664583812c5c143b35e119.html" target="element"> SAML </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-8193832dda1e4a989d5cefdaf7d95ae3.html" target="element"> IDM </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-b6d66127a42f4572bc9baccaa7675160.html" target="element"> ESB </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-d1143212c74c447196009186d1e0fddc.html" target="element"> Afschermen applicatie </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-f99e6cb5121f46f099ad8a5e6258da08.html" target="element"> Rol </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-00598f1211994c98bd4cec58c8c76785.html" target="element"> Gast </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-c5bbb165a809401ba68bf0c5a19af555.html" target="element"> Rol-id </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-948eb32ddf314f17bd62656727768298.html" target="element"> Domeinnaam Instelling </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-d1fe4ffe34534a8b9060e0d1d239a9e7.html" target="element"> Applicatie </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-f4e5e3f61d7345a285685b4c566139a6.html" target="element"> Rolnaam </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-f089556944f548f2bfc68457806651a3.html" target="element"> Landingpage </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-13db7b4b37654d8faa19a6dbae4ad1d5.html" target="element"> Provisioning target </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-1c6cebab9da64bd0845f1227dbfe990a.html" target="element"> Applicatie entityID </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-e614aa3648f740818e07339fca86e134.html" target="element"> Applicatie Displayname </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-34ba6be675674dd18fac1caf5d1bb886.html" target="element"> Voorwaarden </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-568ddf99f44348469774fdba0311c4a2.html" target="element"> Voorwaarde email-adres </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-aecf3d6e7bf54de1bba75b72e3085965.html" target="element"> voorwaarde gevalideerd account </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-d6e95d11d98c4615963adb8caaeacbea.html" target="element"> Uitnodiging </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-01fcc55db03f4ba9bfeacd7e6f7d642c.html" target="element"> e-mail adres </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-73dfbbdc05f14d71baed70d41d12379d.html" target="element"> eduPersonPrincipalName </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-6470e59911de4b28be36d96519394335.html" target="element"> einddatum </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-dba92b1840354f9bb6640adca21e98d1.html" target="element"> Status uitnodiging </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-d5de8ee6bb914d389354e8cea3f64874.html" target="element"> Uitnodiger </a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-f9de9f7f65df49dc96419963be5f0e89.html" target="element"> eduID </a></li>
+
+									</ul>
+								</li>
+								<li class="tree-folder "><span class="i18n-technology_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+									<ul>
+									</ul>
+								</li>
+								<li class="tree-folder "><span class="i18n-motivation"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+									<ul>
+									</ul>
+								</li>
+								<li class="tree-folder "><span class="i18n-implementation"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+									<ul>
+									</ul>
+								</li>
+								<li class="tree-folder "><span class="i18n-connectors"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+									<ul>
+									</ul>
+								</li>
+								<li class="tree-folder "><span class="i18n-relations"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+									<ul>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/098cfc30-edcb-4b88-a906-19f3f6d2e749.html" target="element">
+															<span class="i18n-elementtype-RealizationRelationship"></span>
+														(Gasten applicatie backend - REST service) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-149b0680a2f04c72bac7d42ea5c3f7f4.html" target="element">
+															<span class="i18n-elementtype-ServingRelationship"></span>
+														(REST service - Uitnodig portaal (SURF)) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-65120a26f7a94a0ab2be03feb4e6f16a.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Gasten applicatie - REST service) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-3d9ba3f26e5a421882eca0d1e9cd5a4a.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Gasten applicatie - Gasten applicatie backend) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-e682e1907d6f4c679eb8431f6f9689e9.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Gasten applicatie - Uitnodig portaal (SURF)) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-cfd9441a8644436699252328cffc7b3c.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(SURFconext - Attribute Aggregation) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-6abece1d6fd74426b4b1220ce1aebcf5.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(SURFconext - PDP) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-57824a254d0045439a6595924012ac60.html" target="element">
+															<span class="i18n-elementtype-ServingRelationship"></span>
+														(REST service - Uitnodig-portaal (instelling)) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-c6b927d3dfe747c09581b4aff05916c2.html" target="element">
+															<span class="i18n-elementtype-RealizationRelationship"></span>
+														(SURFconext - SAML) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-2e9f538d10c34e50b795c2476aa0794d.html" target="element">
+															SCIM
+														(Gasten applicatie backend - ESB) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-bd87e6b7128548dd8dc20706571d332a.html" target="element">
+															<span class="i18n-elementtype-TriggeringRelationship"></span>
+														(IDM - webapplicatie) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-98aa3c7a4bbf4525ac6f2c57d4f087db.html" target="element">
+															<span class="i18n-elementtype-AssociationRelationship"></span>
+														(Gast - Inloggen) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-ca089fafbf7d4f34af6240d39018f4cb.html" target="element">
+															<span class="i18n-elementtype-AssociationRelationship"></span>
+														(Gast - Accepteren uitnodiging) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-1d1173181d0f41029da98e7608a40198.html" target="element">
+															<span class="i18n-elementtype-AssociationRelationship"></span>
+														(Uitnodiger - Beheren gasten) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-4460c1c90f944cc89794343d0e8b4ba0.html" target="element">
+															<span class="i18n-elementtype-AssociationRelationship"></span>
+														(Rolbeheerder - Beheren rollen) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-9bbe242e16cb4c6896bdc17335ccbf2c.html" target="element">
+															VOOT
+														(Gasten applicatie backend - SURFconext) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-d043f9686e284566ae56f46a4c9231d2.html" target="element">
+															<span class="i18n-elementtype-ServingRelationship"></span>
+														(SAML - Afschermen applicatie) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-7f41f02c688f4e8b97b1d08543328271.html" target="element">
+															<span class="i18n-elementtype-ServingRelationship"></span>
+														(Afschermen applicatie - webapplicatie) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-0c10d3fd651f46f1b622df3317545de5.html" target="element">
+															<span class="i18n-elementtype-ServingRelationship"></span>
+														(PDP - Afschermen applicatie) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-55a7c7c0acc94d0080a8501b2022e7f2.html" target="element">
+															<span class="i18n-elementtype-ServingRelationship"></span>
+														(Attribute Aggregation - PDP) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-1191af052b40444a8b310d45b5467cce.html" target="element">
+															<span class="i18n-elementtype-ServingRelationship"></span>
+														(Uitnodig portaal (SURF) - Beheren gasten) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-39bf9774568442019734e9e908ab5c73.html" target="element">
+															<span class="i18n-elementtype-ServingRelationship"></span>
+														(Uitnodig portaal (SURF) - Beheren rollen) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-e8882c6519aa42709509716b23ebc387.html" target="element">
+															<span class="i18n-elementtype-AssociationRelationship"></span>
+														(Inloggen - webapplicatie) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-c123f3930c124a988518ff96879b3255.html" target="element">
+															<span class="i18n-elementtype-RealizationRelationship"></span>
+														(SURFconext - Afschermen applicatie) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-fadf5adb895848198047469c67c8f205.html" target="element">
+															<span class="i18n-elementtype-TriggeringRelationship"></span>
+														(ESB - IDM) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-4932e78719bd47b28e97a9c2407e7586.html" target="element">
+															<span class="i18n-elementtype-ServingRelationship"></span>
+														(Uitnodig portaal (SURF) - Accepteren uitnodiging) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-ec408bdae7fe496a83d9cbc1b5a03ad2.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren gasten - Toevoegen rol aan gast) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-6ab955a77a0348bcae68d34c303b110a.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren gasten - Verwijderen rol van gast) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-d3510e59f97644c5b4facf99af4c0734.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren gasten - Update einddatum rol van gast) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-351bad280040475eb20c23900b9c0895.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren gasten - Updaten gast-gegevens) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-e6e97737e7f4422daad90d97242f2c27.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren gasten - Opvragen beschikbare rollen) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-d261bbaf477341dc9038be382bdbbd3c.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren gasten - Opvragen gastenlijst) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-b5e96de2f3b5485dbdf26cae174db224.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren gasten - Opvragen gast-gegevens) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-17e887036fc44d36a50df938d44c7777.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren uitnodigers - Verwijderen Uitnodiger) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-565f945888d84734adfcf372c2305f5a.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren uitnodigers - Opvragen Uitnodigers) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-dd749b7bf8734dbb8ae59be99c4c73c6.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren uitnodigers - Opvragen uitnodiger) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-6ea66facae694102b7ccc322f2016839.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren uitnodigers - Updaten Uitnodiger) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-faa49b1756584e70815a209cc1bfbfa0.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren uitnodigers - Aanmaken uitnodiger) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-432fd9ecde334093b58db0d5a888f5e1.html" target="element">
+															<span class="i18n-elementtype-AssociationRelationship"></span>
+														(Beheren uitnodigers - Rolbeheerder) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-d890594f717c432cb6989b0927b87e58.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren rollen - Opvragen Rol) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-206f8e29ff58426aa8dca028a339a54b.html" target="element">
+															<span class="i18n-elementtype-AggregationRelationship"></span>
+														(Beheren rollen - Updaten Rol) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-9b22fbebbb864221840cb7f88c3b1105.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren rollen - Verwijderen Rol) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-f087d98a7e0d41b2ba3eb4a60c7cf8e1.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren rollen - Aanmaken Rol) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-01c22971708c48e0b275d321c097fae3.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren rollen - Opvragen Rollen) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-83f03a9b833148519dff490cdf6ecab3.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren gasten - Verstuur bulk uitnodiging) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-f1978f8bb6db46b4980a0e6e3580c14a.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren gasten - Verstuur enkele uitnodiging) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-e1d2c5f3a6a440e6a6cf19307c33bee2.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren rolbeheerders - Aanmaken Rolbeheerder) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-d119f23bdb2146fbac79b4596d6a9c06.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren rolbeheerders - Opvragen Rolbeheerders) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-0dd4c8650caf4967a0433ec489b38885.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren rolbeheerders - Opvragen rolbeheerder) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-046f66e39bc94f758fa3164f81afb952.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren rolbeheerders - Updaten Rolbeheerder) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-d2e70d0cfe0f4e34ac4d6c73068e715b.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Beheren rolbeheerders - Verwijderen Rolbeheerder) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-ee67d99b800c4563813f00a5428bec8e.html" target="element">
+															<span class="i18n-elementtype-AssociationRelationship"></span>
+														(Super admin - Beheren rolbeheerders) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-16c6b16518a04d74aa0bb1db206553c9.html" target="element">
+															<span class="i18n-elementtype-ServingRelationship"></span>
+														(Gasten applicatie backend - Beheren rolbeheerders) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-0b129b4d8a984634be4aece0d23730ff.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Rol-id - Domeinnaam Instelling) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-df0d0337021e46aa9cf2e22163bfa2f3.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Rol-id - Applicatie) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-fe74cd44c1fa487ea32527a797b1295e.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Rol-id - Rolnaam) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-980b1588af034c8c8aaf2a232b288c55.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Rol - Rol-id) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-c9b851f0f3da490296e91bb0b0330aeb.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Rol - Landingpage) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-83b26e23df4545d4825b529211c79a31.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Rol - Provisioning target) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-d3427c6d97094208bcffe97f4fca7f38.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Applicatie - Applicatie entityID) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-90b21cc468404410ada9840599ad1980.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Applicatie - Applicatie Displayname) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-e3bfa6690ce449df9df286fc089ee0f5.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Rol - Voorwaarden) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-9e4e5325e6e9440e957c2eeb95435f9e.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Uitnodiging - Rol) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-e0fd6ecea2484e7792d5f5bb549e6c39.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Uitnodiging - Gast) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-7219ab5e8a9749b29a77adcab06ce70d.html" target="element">
+															<span class="i18n-elementtype-SpecializationRelationship"></span>
+														(Voorwaarde email-adres - Voorwaarden) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-87bd507b246b4960850c8601b58ad172.html" target="element">
+															<span class="i18n-elementtype-SpecializationRelationship"></span>
+														(voorwaarde gevalideerd account - Voorwaarden) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-117a51f10bb74ff8ba51c4aea488a9b2.html" target="element">
+															<span class="i18n-elementtype-AggregationRelationship"></span>
+														(Gast - eduPersonPrincipalName) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-c13209f90d434895bd1d0b3ead4c0d7c.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Gast - e-mail adres) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-aade59914f6b455dbbad62a3909d30d1.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Uitnodiging - einddatum) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-22d036231b8f4647adcf720039ec15ad.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Uitnodiging - Status uitnodiging) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-90a76dbcdcaa45959a303f1c220b89f8.html" target="element">
+															<span class="i18n-elementtype-CompositionRelationship"></span>
+														(Uitnodiging - Uitnodiger) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-b69819a9d112479ab68e104c997a36f7.html" target="element">
+															<span class="i18n-elementtype-AccessRelationship"></span>
+														(Beheren rollen - Rol) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-1324d38d00054438bc6a9923872412d0.html" target="element">
+															<span class="i18n-elementtype-AssociationRelationship"></span>
+														(Gast - Gast) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-2889595a67c84e66b5dbb8516021f51e.html" target="element">
+															<span class="i18n-elementtype-AccessRelationship"></span>
+														(Accepteren uitnodiging - Uitnodiging) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-b49aa36a3d98445eb0e88301dfb202a1.html" target="element">
+															<span class="i18n-elementtype-AccessRelationship"></span>
+														(Beheren gasten - Uitnodiging) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-6c6e0e6967394ff98a2da2693042bb0e.html" target="element">
+															<span class="i18n-elementtype-AssociationRelationship"></span>
+														(Rolbeheerder - Rol) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-0c388592aa9940fe89acd4c89c0928b0.html" target="element">
+															<span class="i18n-elementtype-AssociationRelationship"></span>
+														(Uitnodiger - Uitnodiging) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-8bd57d52db4b415d86826726b9ce6598.html" target="element">
+															<span class="i18n-elementtype-AggregationRelationship"></span>
+														(SURFconext - eduID) 
+													</a></li>
+													<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/elements/id-a038a1967c894fb3bd9aa127ed0c0820.html" target="element">
+															<span class="i18n-elementtype-ServingRelationship"></span>
+														(eduID - SAML) 
+													</a></li>
+
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="tree-folder "><span class="i18n-views"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+							<ul>
+											<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/views/00685569-37a2-4756-b7b7-6f79dc6bdbd1.html" target="view">  Overzicht </a></li>
+											<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/views/id-8587d0b1d1984510be3550fcccdc1241.html" target="view"> Rollen </a></li>
+											<li class="tree-element "><a href="6b9fe962-26f9-4831-ab4f-4a784a0f2b4a/views/id-8e1f5efd1bbe4f26b1dd4faa3d6117db.html" target="view"> Data objecten </a></li>
+
+							</ul>
+						</li>
+					<!-- END OF STRINGTEMPLATE CODE -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- START ABOUT MODAL DIALOG -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h4 class="modal-title i18n-about"></h4>
+				</div>
+				<div class="modal-body">
+					<p><strong> <span class="i18n-about-pluginname"></span></strong></p>
+					<p><span class="i18n-about-pluginversion"></span></p>
+					<p><span class="i18n-about-plugintext1"></span></p>
+					<p><span class="i18n-about-plugintext2"></span></p>
+					<p><a href="https://www.archimatetool.com" target="_blank">Archi®</a> <span class="i18n-about-plugintext3"></span></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default i18n-close" data-dismiss="modal"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END ABOUT MODAL DIALOG -->
+
+	<!-- START HINT MODAL DIALOG -->
+	<div class="modal fade first-load" id="myModalHint" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+						<h4 class="modal-title i18n-hint"></h4>
+				</div>
+				<div class="modal-body">
+						<iframe id="frame-hint" name="hint" onload="if($('#myModalHint').hasClass('first-load')) $('#myModalHint').removeClass('first-load'); else $('#myModalHint').modal({show:true});"></iframe>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default i18n-close" data-dismiss="modal"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END HINT MODAL DIALOG -->
+</body>
+</html>

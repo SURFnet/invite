@@ -1,12 +1,15 @@
 openapi: 3.0.0
 info:
   title: GuestApplication API
-  description: This describes the REST interface to the guestapplication API
+  description: |
+    This describes the REST interface to the invite-application API.
+    # Design
+    The arcitectural design for this application can be found [here](../archi/index.html)
   version: 0.0.1
 servers:
-  - url: http://guest.test.eduid.nl/v1
+  - url: http://invite.test.eduid.nl/v1
     description: Public testing enviroment
-  - url: http://guest.eduid.nl/v1
+  - url: http://invite.eduid.nl/v1
     description: Production enviroment
 paths:
   /invite:

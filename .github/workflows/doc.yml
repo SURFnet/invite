@@ -11,21 +11,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: redoc-cli test
+      - name: lint index file
+        uses: nosborn/github-action-markdown-cli@v2.0.0
+        with:
+          files: docs/index.md
+
+      - name: Test api-specs with redoc-cli
         uses: seeebiii/redoc-cli-github-action@v10
         with:
-          args: 'bundle specs/guestappapi.yaml -o docs/index.html'
+          args: 'bundle specs/invite.yaml -o docs/api/index.html'
 
       - name: check result
         run: |
-          ls -al docs/
-          test -f docs/index.html || (echo "Missing docs/index.html from previous step." && exit 1)
+          ls -al docs/api/
+          test -f docs/api/index.html || (echo "Missing docs/index.html from previous step." && exit 1)
 
       - name: Commit files if the html has changed
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add docs/index.html
+          git add docs/api/index.html
           git diff-index --quiet HEAD || git commit -m "Update github page"
 
       - name: Push changes
