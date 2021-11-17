@@ -1,12 +1,12 @@
 type: object
 required:
   - role
-  - guest
+  - user
 properties:
   role:
     $ref: "./Role.yaml"
-  guest:
-    $ref: "./Guest.yaml"
+  user:
+    $ref: "./User.yaml"
   enddate:
     type: string
     format: date

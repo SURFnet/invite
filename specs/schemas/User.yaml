@@ -1,27 +1,60 @@
 type: object
+required:
+  - name
+  - userName
+  - emails
 properties:
-  email:
+  id:
     type: string
-    format: email
-    example: "sjon.vandersjonnies@universiteitvanharderwijk.nl"
-  displayname:
-    type: string
-    example: "Sjon van der sjonnies"
-  edupersonprincipalname:
-    type: string
-    format: email
-    example: "ssjonnies@universiteitvanharderwijk.nl"
-  institution:
-    type: array
-    items:
-      properties:
-        schachome:
-          type: string
-          format: uri
-          example: "universiteitvanharderwijk.nl"
-  rights:
-    type: array
-    items:
+    description: Unique id in the service provider
+    example: 48ade859-d53e-4abc-baff-d4bc644c3e6b
+  externalId:
       type: string
-      enum: [Superadmin, Roleadmin, Inviter]
-      example: "Roleadmin"
+      format: uuid
+      description: Unique id in the invite application
+      example: 745bacd2-6c56-47e3-b307-d7ba6b6ab18b
+  name:
+    type: object
+    properties:
+      formatted:
+        type: string
+        description: The full name, including all middle names, titles, and suffixes as appropriate, formatted for display
+        example: "Drs. K.H.I. (Kees Willem) Klaasen III"
+      familyName:
+        type: string
+        description: The family name of the User, or last name in most Western languages
+        example: Klaasen
+      givenName:
+        type: string
+        description: The given name of the User, or first name in most Western languages
+        example: Kees
+      middleName:
+        type: string
+        description: The middle name of the User
+        example: Willem
+      honorificPrefix:
+        type: string
+        description: The honorific prefix(es) of the User, or title in most Western languages
+        example: Drs
+      honorificSuffix:
+        type: string
+        description: The honorific suffix(es) of the User, or suffix in most Western languages
+        example: III
+    required:
+      - familyName
+      - givenName
+  displayName:
+    type: string
+    description: The name of the user, suitable for display to end-users.
+    example: "Kees Klaasen"
+  userName:
+    type: string
+    format: email
+    description: A service provider's unique identifier for the user, typically used by the user to directly authenticate to the service provider. For SURFconext connected services the edupersonprincipalname (eppn) will be used.
+  emails:
+    type: array
+    items:
+      value:
+        type: string
+        format: email
+    description: The email addresses of the users

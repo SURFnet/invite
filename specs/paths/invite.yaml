@@ -21,7 +21,7 @@ get:
     '404':
       $ref: '../components/responses/NotFound.yaml'
 post:
-  summary: Sends an invite to a guest user
+  summary: Sends an invite to a user
   requestBody:
     required: true
     content:
