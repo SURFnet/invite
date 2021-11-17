@@ -14,4 +14,5 @@ To test and demonstrate the application, an example client application is availa
 ## Documentation
 
 - [API documentation](./api/)
-- [Architecture design](./archi)
+- [Architecture design](./archi/?view=00685569-37a2-4756-b7b7-6f79dc6bdbd1)
+- [Roles & permissions](./rights.md)
