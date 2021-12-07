@@ -22,3 +22,7 @@ paths:
     $ref: './paths/user.yaml'
   /users:
     $ref: './paths/users.yaml'
+  /application:
+    $ref: './paths/application.yaml'
+  /applications:
+    $ref: './paths/applications.yaml'

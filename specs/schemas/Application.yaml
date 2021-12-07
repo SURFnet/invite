@@ -1,5 +1,10 @@
 type: object
 properties:
+  id:
+    type: string
+    format: uuid
+    readOnly: true
+    example: 301ee8e6-b5d1-40b5-a27e-47611f803371
   displayname:
     type: string
     example: "This beatifull service"
