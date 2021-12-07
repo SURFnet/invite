@@ -50,8 +50,6 @@ put:
           $ref: '../schemas/User.yaml'
   responses:
     '200':
-      description: OK
-    default:
       description: The User was updated, the new User is returned
       content:
         application/json:

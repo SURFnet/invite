@@ -50,8 +50,6 @@ put:
           $ref: '../schemas/Application.yaml'
   responses:
     '200':
-      description: OK
-    default:
       description: The application was updated, the new application is returned
       content:
         application/json:

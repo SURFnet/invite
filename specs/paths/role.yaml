@@ -49,8 +49,6 @@ put:
           $ref: '../schemas/Role.yaml'
   responses:
     '200':
-      description: OK
-    default:
       description: The role was updated, the new role is returned
       content:
         application/json:
