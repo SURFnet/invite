@@ -52,9 +52,6 @@ properties:
     format: email
     description: A service provider's unique identifier for the user, typically used by the user to directly authenticate to the service provider. For SURFconext connected services the edupersonprincipalname (eppn) will be used.
   emails:
-    type: array
-    items:
-      value:
-        type: string
-        format: email
+    type: string
+    format: email
     description: The email addresses of the users
