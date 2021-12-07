@@ -19,7 +19,7 @@ jobs:
       - name: Test api-specs with redoc-cli
         uses: seeebiii/redoc-cli-github-action@v10
         with:
-          args: 'bundle specs/invite.yaml -o docs/api/index.html'
+          args: 'bundle specs/invite.yaml -t template.hbs -o docs/api/index.html'
 
       - name: check result
         run: |
