@@ -1,6 +1,69 @@
 get:
-  summary: Returns an user
-  description: Retrieves the information of a single inviter or roleadmin
+  summary: Get a user
+  description: Retrieves a single role
+  parameters:
+    - name: id
+      in: query
+      description: Unique id in the service provider
+      required: true
+      schema:
+        type: string
+        format: uuid
+        example: 48ade859-d53e-4abc-baff-d4bc644c3e6b
+  responses:
+    '200':    # status code
+      description: a single user
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/User.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'
+post:
+  summary: Create a User
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/User.yaml'
+  responses:
+    '201':
+      description: The User was created, the new User is returned
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/User.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'
+put:
+  summary: Update a User
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/User.yaml'
+  responses:
+    '200':
+      description: OK
+    default:
+      description: The User was updated, the new User is returned
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/User.yaml'
+    '401':
+      $ref: '../components/responses/Unauthorized.yaml'
+    '404':
+      $ref: '../components/responses/NotFound.yaml'
+delete:
+  summary: Deletes a User
+  description: Deletes the User specified by the id
   parameters:
     - name: id
       in: query
@@ -9,13 +72,10 @@ get:
       schema:
         type: string
         format: uuid
+        example: 48ade859-d53e-4abc-baff-d4bc644c3e6b
   responses:
     '200':    # status code
-      description: a single role
-      content:
-        application/json:
-          schema:
-            $ref: '../schemas/User.yaml'
+      description: OK
     '401':
       $ref: '../components/responses/Unauthorized.yaml'
     '404':
