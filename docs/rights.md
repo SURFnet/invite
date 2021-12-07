@@ -8,18 +8,18 @@ This describes the roles that exist in the application, and the rights each role
 |/invite/<br>Send an invite                 |POST   |Allow      |Limited to own Institution |Limited to own Application | -                                         |
 |/invite/<br>Update an invite               |PUT    |Allow      |Limited to own Institution |Limited to own Application |Only update status if the user is invited  |
 |/invite/<br>Revoke an invite               |DELETE |Allow      |Limited to own Institution |Limited to own Application | -                                         |
-|/role/?id=                                 |GET    |Allow      |                           |                           |       |
-|/role/                                     |POST   |Allow      |                           |                           |       |
-|/role/                                     |PUT    |Allow      |                           |                           |       |
-|/role/                                     |DELETE |Allow      |                           |                           |       |
-|/roles/                                    |GET    |Allow      |                           |                           |       |
-|/user/?id=                                 |GET    |Allow      |                           |                           |       |
-|/user/                                     |POST   |Allow      |                           |                           |       |
-|/user/                                     |PUT    |Allow      |                           |                           |       |
-|/user/                                     |DELETE |Allow      |                           |                           |       |
-|/users/                                    |GET    |Allow      |                           |                           |       |
-|/application/?id=                          |GET    |Allow      |                           |                           |       |
-|/application/                              |POST   |Allow      |                           |                           |       |
-|/application/                              |PUT    |Allow      |                           |                           |       |
-|/application/                              |DELETE |Allow      |                           |                           |       |
-|/applications/                             |GET    |Allow      |                           |                           |       |
+|/role/?id=                                 |GET    |Allow      |Limited to own Institution |Limited to own Application | -     |
+|/role/                                     |POST   |Allow      |Limited to own Institution | -                         | -     |
+|/role/                                     |PUT    |Allow      |Limited to own Institution | -                         | -     |
+|/role/                                     |DELETE |Allow      |Limited to own Institution | -                         | -     |
+|/roles/                                    |GET    |Allow      |Limited to own Institution |Limited to own Application | -     |
+|/user/?id=                                 |GET    |Allow      | -                         |Limited to accepted invites|Only own information       |
+|/user/                                     |POST   |Allow      | -                         |Limited to accepted invites| -     |
+|/user/                                     |PUT    |Allow      | -                         |Limited to accepted invites|Only own information       |
+|/user/                                     |DELETE |Allow      | -                         | -                         | -     |
+|/users/                                    |GET    |Allow      | -                         |Limited to accepted invites| -     |
+|/application/?id=                          |GET    |Allow      |Limited to own Institution |Limited to own Application |Only invited application   |
+|/application/                              |POST   |Allow      |Limited to own Institution | -                         | -     |
+|/application/                              |PUT    |Allow      |Limited to own Institution | -                         | -     |
+|/application/                              |DELETE |Allow      |Limited to own Institution | -                         | -     |
+|/applications/                             |GET    |Allow      |Limited to own Institution |Limited to own Application |Only invited application   |
