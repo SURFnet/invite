@@ -2,6 +2,7 @@ type: object
 required:
   - role
   - user
+  - enddate
 properties:
   role:
     $ref: "./Role.yaml"
