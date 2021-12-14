@@ -1,3 +1,4 @@
+---
 get:
   summary: List users
   description: Retrieves a list of inviters and roleadmins

@@ -1,3 +1,4 @@
+---
 get:
   summary: Retrieve an invite
   description: Retrieves a single invite

@@ -1,3 +1,4 @@
+---
 get:
   summary: Get a role
   description: Retrieves a single role

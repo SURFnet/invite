@@ -1,3 +1,4 @@
+---
 get:
   summary: List roles
   description: Retrieves a list of roles

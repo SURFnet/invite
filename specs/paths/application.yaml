@@ -1,3 +1,4 @@
+---
 get:
   summary: Get a application
   description: Retrieves a single application

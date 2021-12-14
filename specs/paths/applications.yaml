@@ -1,3 +1,4 @@
+---
 get:
   summary: List applications
   description: Retrieves a list of all applications

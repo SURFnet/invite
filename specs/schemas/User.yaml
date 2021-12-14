@@ -1,3 +1,4 @@
+---
 type: object
 required:
   - name
@@ -9,10 +10,10 @@ properties:
     description: Unique id in the service provider
     example: 48ade859-d53e-4abc-baff-d4bc644c3e6b
   externalId:
-      type: string
-      format: uuid
-      description: Unique id in the invite application
-      example: 745bacd2-6c56-47e3-b307-d7ba6b6ab18b
+    type: string
+    format: uuid
+    description: Unique id in the invite application
+    example: 745bacd2-6c56-47e3-b307-d7ba6b6ab18b
   name:
     type: object
     properties:
@@ -50,7 +51,7 @@ properties:
   userName:
     type: string
     format: email
-    description: A service provider's unique identifier for the user, typically used by the user to directly authenticate to the service provider. For SURFconext connected services the edupersonprincipalname (eppn) will be used.
+    description: A service provider's unique identifier for the user, typically used by the user to directly authenticate to the service provider. For SURFconext connected services the edupersonprincipalname (eppn) will be used. # yamllint disable-line
   emails:
     type: string
     format: email
