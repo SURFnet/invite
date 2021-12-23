@@ -220,6 +220,8 @@ Content-Type: application/json
 }
 ```
 
+Bij het aanmaken van een groep zal de lijst met `members` leeg zijn.
+
 #### Response
 
 ```curl
