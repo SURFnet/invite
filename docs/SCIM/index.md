@@ -45,7 +45,7 @@ Na het accepteren van de eerste uitnodiging van een instelling, moet de gebruike
 ```curl
 POST /v1/Users  HTTP/1.1
 Accept: application/json
-Authorization: Bearer XXXXXXXXXXXXXXXXXXXX
+Authorization: Basic dXNlcjpwYXNzd29yZA==
 Host: example.com
 Content-Length: ...
 Content-Type: application/json
@@ -112,7 +112,7 @@ dan sturen we een geupdate user-object naar alle service providers waar deze geb
 ```curl
 PATCH /v1/users/{UserID at SP}  HTTP/1.1
 Accept: application/json
-Authorization: Bearer XXXXXXXXXXXXXXXXXXXX
+Authorization: Basic dXNlcjpwYXNzd29yZA==
 Host: example.com
 Content-Length: ...
 Content-Type: application/json
@@ -177,7 +177,7 @@ Niet actieve gebruikers worden na X dagen verwijderd uit de invite applicatie, e
 ```curl
 DELETE /users/{UserID at SP}  HTTP/1.1
 Accept: application/json
-Authorization: Bearer XXXXXXXXXXXXXXXXXXXX
+Authorization: Basic dXNlcjpwYXNzd29yZA==
 Host: example.com
 ```
 
@@ -200,7 +200,7 @@ Bij het aanmaken van een groep in de invite applicatie wordt deze direct verstuu
 ```curl
 POST /v1/Groups  HTTP/1.1
 Accept: application/json
-Authorization: Bearer XXXXXXXXXXXXXXXXXXXX
+Authorization: Basic dXNlcjpwYXNzd29yZA==
 Host: example.com
 Content-Length: ...
 Content-Type: application/json
@@ -260,7 +260,7 @@ Daarna wordt de gebruiker aan de bestaande groep toegevoegd door het hele groep-
 ```curl
 PATCH /v1/Groups/{GroupID at SP} HTTP/1.1
 Accept: application/json
-Authorization: Bearer XXXXXXXXXXXXXXXXXXXX
+Authorization: Basic dXNlcjpwYXNzd29yZA==
 Host: example.com
 Content-Length: ...
 Content-Type: application/json
@@ -324,7 +324,7 @@ Als groepen worden verwijderd vanuit de invite applicatie wordt dit ook doorgege
 ```curl
 DELETE /groups/{GroupID at SP}  HTTP/1.1
 Accept: application/json
-Authorization: Bearer XXXXXXXXXXXXXXXXXXXX
+Authorization: Basic dXNlcjpwYXNzd29yZA==
 Host: example.com
 ```
 
