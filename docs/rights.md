@@ -2,7 +2,7 @@
 
 This describes the roles that exist in the application, and the rights each role has on each endpoint.
 
-|                                           |       |SuperAdmin |RoleAdmin                  |Inviter                    |Guest                                      |
+|                                           |       |SuperAdmin |Institution Admin          |Inviter                    |Guest                                      |
 |---                                        |---    |---        |---                        |---                        |---                                        |
 |/invite/?id=<br>Retrieve single invite     |GET    |Allow      |Limited to own Institution |Limited to own Institution |Only if the user is invited                |
 |/invite/<br>Send an invite                 |POST   |Allow      |Limited to own Institution |Limited to own Institution | -                                         |
@@ -13,11 +13,11 @@ This describes the roles that exist in the application, and the rights each role
 |/role/                                     |PUT    |Allow      |Limited to own Institution | -                         | -     |
 |/role/                                     |DELETE |Allow      |Limited to own Institution | -                         | -     |
 |/roles/                                    |GET    |Allow      |Limited to own Institution |Limited to own Institution | -     |
-|/user/?id=                                 |GET    |Allow      | -                         |Limited to accepted invites|Only own information       |
-|/user/                                     |POST   |Allow      | -                         |Limited to accepted invites| -     |
-|/user/                                     |PUT    |Allow      | -                         |Limited to accepted invites|Only own information       |
-|/user/                                     |DELETE |Allow      | -                         | -                         | -     |
-|/users/                                    |GET    |Allow      | -                         |Limited to accepted invites| -     |
+|/user/?id=                                 |GET    |Allow      |Limited to own Institution |Limited to accepted invites|Only own information       |
+|/user/                                     |POST   |Allow      |Limited to own Institution |Limited to accepted invites| -     |
+|/user/                                     |PUT    |Allow      |Limited to own Institution |Limited to accepted invites|Only own information       |
+|/user/                                     |DELETE |Allow      |Limited to own Institution | -                         | -     |
+|/users/                                    |GET    |Allow      |Limited to own Institution |Limited to accepted invites| -     |
 |/application/?id=                          |GET    |Allow      |Limited to own Institution |Limited to own Application |Only invited application   |
 |/application/                              |POST   |Allow      |Limited to own Institution | -                         | -     |
 |/application/                              |PUT    |Allow      |Limited to own Institution | -                         | -     |
