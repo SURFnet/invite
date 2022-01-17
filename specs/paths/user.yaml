@@ -1,7 +1,7 @@
 ---
 get:
   summary: Get a user
-  description: Retrieves a single role
+  description: Retrieves a single user
   parameters:
     - name: id
       in: query

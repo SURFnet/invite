@@ -32,7 +32,7 @@ Er zijn meerdere attribiten die een gebruiker of groep identificeren:
 in het SCIM protocol de inlognaam voor de gebruiker als deze bij de Service Provider in gaat loggen.
 
 Voor de gebruikers die via de invite-applicatie beheerd worden, gebruiken we de eduPersonPrincipalName (eppn) voor de indentifiers,
-zodat ze oom bij een SAML of oidc authenticatie herkend kunnen worden.
+zodat ze ook bij een SAML of oidc authenticatie herkend kunnen worden.
 
 ## Gebruikers
 
