@@ -1,0 +1,25 @@
+---
+type: object
+properties:
+  createdAt:
+    type: integer
+    format: int64
+    minimum: 1
+    description: When was this object created (unix timestamp)
+    example: 1641825769
+  createdBy:
+    type: string
+    format: uuid
+    description: The id of the user who created this object
+    example: 4ffb8402-507c-3ce5-a5e4-7cb057ce6f08
+  updatedAt:
+    type: integer
+    format: int64
+    minimum: 1
+    description: When was this object last updated (unix timestamp)
+    example: 1641825769
+  updatedBy:
+    type: string
+    format: uuid
+    description: The id of the user who updated this object
+    example: 4ffb8402-507c-3ce5-a5e4-7cb057ce6f08
