@@ -22,9 +22,11 @@ De endpoints bij de instellingen ondersteunen de volgende operaties:
 - Update: PATCH `https://example.com/{v}/{resource}/{id}`
 - Search: GET `https://example.com/{v}/{resource}?ﬁlter={attribute}{op}{value}&sortBy={attributeName}&sortOrder={ascending|descending}`
 
+PUT operaties leveren het complete object; PATCH operaties geven het verschil met het huidige object door. [Zie rfc7644 section-3.5.2](https://datatracker.ietf.org/doc/html/rfc7644#section-3.5.2)
+
 ## Identifiers
 
-Er zijn meerdere attribiten die een gebruiker of groep identificeren:
+Er zijn meerdere attributen die een gebruiker of groep identificeren:
 
 - **id** : De identifier voor een gebruiker of groep bij de Service Provider
 - **externalId** : De identifier binnen de gastenapplicatie
@@ -110,7 +112,7 @@ dan sturen we een geupdate user-object naar alle service providers waar deze geb
 #### Request
 
 ```curl
-PATCH /v1/users/{UserID at SP}  HTTP/1.1
+PUT /v1/users/{UserID at SP}  HTTP/1.1
 Accept: application/json
 Authorization: Basic dXNlcjpwYXNzd29yZA==
 Host: example.com
@@ -255,12 +257,17 @@ De **{GroupID at SP}** uit het antwoord wordt in de Invite-applicatie opgeslagen
 ### Update groep (Gebruiker toevoegen/verwijderen)
 
 Als een gebruiker een uitnodiging accepteert, wordt de gebruiker eerst aangemaakt (met bovenstaand user bericht) als deze nog niet bestond.
-Daarna wordt de gebruiker aan de bestaande groep toegevoegd door het hele groep-object (met alle leden) als update te sturen.
+Daarna wordt de gebruiker aan de bestaande groep toegevoegd door het hele groep-object (met alle leden) als update te sturen (PUT)
+of door het verschil door te geven (PATCH).
 
-#### Request
+Per applicatie is in te stellen of groep-updates als PUT of PATCH verstuurd worden:
+
+PUT operaties leveren het complete object; PATCH operaties geven het verschil met het huidige object door. [Zie rfc7644 section-3.5.2](https://datatracker.ietf.org/doc/html/rfc7644#section-3.5.2)
+
+#### Request PUT
 
 ```curl
-PATCH /v1/Groups/{GroupID at SP} HTTP/1.1
+PUT /v1/Groups/{GroupID at SP} HTTP/1.1
 Accept: application/json
 Authorization: Basic dXNlcjpwYXNzd29yZA==
 Host: example.com
@@ -278,11 +285,36 @@ Content-Type: application/json
    [
       {
          "value":"{UserID at SP}",
+         "externalId": "{Internal UserID at Invite-application}"
       },
       {
          "value":"{Other UserID at SP}",
+         "externalId": "{Other Internal UserID at Invite-application}"
       }
    ]
+}
+```
+
+#### Request PATCH
+
+```curl
+PATCH /v1/Groups/{GroupID at SP} HTTP/1.1
+Accept: application/json
+Authorization: Basic dXNlcjpwYXNzd29yZA==
+Host: example.com
+Content-Length: ...
+Content-Type: application/json
+{
+  "schemas" : [ "urn:ietf:params:scim:api:messages:2.0:PatchOp" ],
+  "externalId" : "test.eduid.nl.uva.canvas.guest",
+  "id" : "f08e1cba-277b-4787-bba6-a97ecf6ef58d",
+  "Operations" : [ {
+    "op" : "Add",
+    "path" : "members",
+    "value" : [ {
+      "value" : "{UserID at SP}"
+    } ]
+  } ]
 }
 ```
 
@@ -307,9 +339,11 @@ Location: https://example.com/v1/Groups/{GroupID at SP}
     [
        {
           "value":"{UserID at SP}",
+          "externalId": "{Internal UserID at Invite-application}"
        },
        {
           "value":"{Other UserID at SP}",
+          "externalId": "{Other Internal UserID at Invite-application}"
        }
     ]
     "externalId": "urn:collab:group:test.eduid.nl:wur.nl:brightspace:gastdocent",
