@@ -164,7 +164,7 @@ Location: https://example.com/v1/Users/{UserID at SP}
   "emails":[
     {
       "type":"other",
-      "value":"peter@gmnail.com"
+      "value":"peter@gmail.com"
     }
   ]
 }
@@ -307,7 +307,7 @@ Content-Type: application/json
 {
   "schemas" : [ "urn:ietf:params:scim:api:messages:2.0:PatchOp" ],
   "externalId" : "test.eduid.nl.uva.canvas.guest",
-  "id" : "f08e1cba-277b-4787-bba6-a97ecf6ef58d",
+  "id" : "{GroupID at SP}",
   "Operations" : [ {
     "op" : "Add",
     "path" : "members",
@@ -317,6 +317,28 @@ Content-Type: application/json
   } ]
 }
 ```
+
+```curl
+PATCH /v1/Groups/{GroupID at SP} HTTP/1.1
+Accept: application/json
+Authorization: Basic dXNlcjpwYXNzd29yZA==
+Host: example.com
+Content-Length: ...
+Content-Type: application/json
+{
+  "schemas" : [ "urn:ietf:params:scim:api:messages:2.0:PatchOp" ],
+  "externalId" : "test.eduid.nl.uva.canvas.guest",
+  "id" : "{GroupID at SP}",
+  "Operations" : [ {
+    "op" : "Remove",
+    "path" : "members",
+    "value" : [ {
+      "value" : "{UserID at SP}"
+    } ]
+  } ]
+}
+```
+
 
 #### Response
 
