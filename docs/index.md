@@ -20,3 +20,4 @@ To test and demonstrate the application, an example client application is availa
 - [Roles & permissions](./rights.md)
 - [Code - server](https://github.com/SURFnet/invite-server)
 - [Code - UI](https://github.com/SURFnet/invite-ui)
+- [Backlog](https://www.pivotaltracker.com/n/projects/2545518)
