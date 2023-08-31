@@ -339,7 +339,6 @@ Content-Type: application/json
 }
 ```
 
-
 #### Response
 
 ```curl
